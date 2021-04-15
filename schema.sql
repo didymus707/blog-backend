@@ -11,7 +11,7 @@ CREATE TABLE posts (
   pid SERIAL PRIMARY KEY,
   title VARCHAR(255),
   body VARCHAR,
-  user_id INT REFERENCES users(id),
+  user_id INT REFERENCES users(uid),
   author VARCHAR REFERENCES users(username),
   date_created TIMESTAMP
 );
