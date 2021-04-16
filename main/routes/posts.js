@@ -11,7 +11,7 @@ router.get('/api/get/allposts', (req, res, next) => {
         )
 });
 
-router.posts('/api/posts/poststodb', (req, res, next) => {
+router.post('/api/posts/posttodb', (req, res, next) => {
   const values = [req.body.title, req.body.body, req.body.uid, req.body.username];
   pool.query(
     `INSERT INTO posts(title, body, user_id, author, date_created)
