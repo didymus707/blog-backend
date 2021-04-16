@@ -12,7 +12,7 @@ router.get('/api/get/allpostcomments', (req, res, next) => {
         )
 });
 
-router.post('/api/posts/commentstodb', (req, res, next) => {
+router.post('/api/post/commenttodb', (req, res, next) => {
   const values = [req.body.comment, req.body.user_id, req.body.username, req.body.post_id];
   pool.query(
     `INSERT INTO comments(comment, body, user_id, author, date_created)
